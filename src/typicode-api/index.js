@@ -2,15 +2,17 @@ const axios = require("axios");
 const { TYPICODE_API_URL } = require("../../config/config");
 
 exports.getPosts = async () => {
-    return axios.get(`${TYPICODE_API_URL}/posts`);
-}
+  return axios.get(`${TYPICODE_API_URL}/posts`);
+};
 
 exports.getUsers = async () => {
-    return axios.get(`${TYPICODE_API_URL}/users`);
-}
+  return axios.get(`${TYPICODE_API_URL}/users`);
+};
 
 exports.getComments = async (postId) => {
-    return axios.get(
-        `${TYPICODE_API_URL}/posts/${postId}/comments`
-      );
-}
+  return axios.get(`${TYPICODE_API_URL}/posts/${postId}/comments`);
+};
+
+exports.getAllComments = async () => {
+  return axios.get(`${TYPICODE_API_URL}/comments`);
+};
